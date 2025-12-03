@@ -115,3 +115,9 @@ async def delete_patient(request: Request, patient_id: int):
     conn.commit()
     conn.close()
     return RedirectResponse("/patients", status_code=303)
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000)
+    
